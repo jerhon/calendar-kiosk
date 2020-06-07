@@ -1,0 +1,31 @@
+<div class="main-container">
+    <div class="content-container">
+        <nav class="sidenav">
+            <div class="profile"><img [src]="this.profileUrl"></div>
+            <clr-icon shape="home" [routerLink]="['/']"></clr-icon>
+        </nav>
+
+        <!-- Loading Area -->
+        <div class="content-area text-vcenter" *ngIf="this.loading">
+            <span class="spinner text-center">Loading...</span>
+        </div>
+
+        <div class="content-area" *ngIf="!this.loading">
+            <div class="date">{{this.currentDate}}</div>
+            <div *ngFor="let appointment of this.appointments" class="my-card">
+                <div class="card-block appointment">
+                    <div class="time">
+                        <div>{{appointment.time | date:'h:mm'}}</div>
+                        <div class="unit">{{appointment.time | date:'a'}}</div>
+                    </div>
+                    <div class="vr"></div>
+                    <div class="text">
+                        <div class="title">{{appointment.description}}</div>
+                        <div class="description">{{appointment.location}}</div>
+                    </div>
+                    <app-time-interval *ngIf="appointment.duration!=86400" [duration]="appointment.duration"></app-time-interval>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

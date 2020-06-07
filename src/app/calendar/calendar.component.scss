@@ -1,0 +1,116 @@
+$light-gray: #f2f2f5;
+
+
+.date {
+    margin-left: 18px;
+    font-size: 28px;
+    padding-bottom: 24px;
+    text-align: center;
+}
+
+clr-icon {
+    color: #2D9CDB;
+}
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 32px;
+    width: 96px;
+    min-width: 96px;
+    max-width: 96px;
+    background-color: $light-gray;
+    align-items: center;
+
+    .profile {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 16px;
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    clr-icon {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 16px;
+    }
+}
+
+.main {
+    flex: 1 1 auto;
+    padding: 16px;
+}
+
+.card {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.my-card {
+    border-bottom: 2px solid grey;
+    border-radius: 15px;
+}
+
+
+
+.appointment {
+    display: flex;
+    flex-direction: row;
+    font-size: 32px;
+    height: 100px;
+    padding: 10px;
+
+    .vr {
+        background-color: #e5e5e5;
+        width: 1px;
+        height: 98;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .time {
+        flex: 0 0 auto;
+        font-size: 2rem;
+        width: 144px;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        margin: 8px;
+    
+        .unit {
+            margin-top: 8px;
+            font-size: 1rem;
+            line-height: 1em;
+            height: 1em;
+            text-align: right;
+        }
+    }
+    
+
+    .text {
+        flex: 1 1 auto;
+
+        .title {
+            margin: 8px;
+        }
+        .description {
+            margin: 8px;
+            margin-left: 32px;
+            font-size: 24px;
+        }
+    }
+    .duration {
+        margin: 8px;
+        .number {
+            font-size: 48px;
+        }
+        .unit {
+            font-size: 24px;
+            text-align: right;
+        }
+    }
+}

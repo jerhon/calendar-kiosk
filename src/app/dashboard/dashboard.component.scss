@@ -1,0 +1,115 @@
+$light-gray: #f2f2f5;
+
+.sidenav {
+    min-width: 200px;
+    padding-right: 15px;
+    background-color: $light-gray;
+}
+
+.spinner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-list {
+    a {
+        width: 100%;
+        text-align: right;
+    }
+    div {
+        text-align: right;
+    }
+}
+
+.profile-picture {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    width: 96px;
+    margin-left: auto;
+    height: 96px;
+
+    img {
+        width: 100%;
+        border-radius: 50%;
+    }
+}
+.current-day-of-week {
+    font-size: 1.5rem;
+    line-height: 1em;
+    height: 1em;
+    width: 100%;
+}
+.current-day-of-month {
+    font-size: 2.5rem;
+    line-height: 1em;
+    height: 1em;
+}
+.current-month {
+    font-size: 1.5rem;
+    line-height: 1em;
+    height: 1em;
+}
+.current-time {
+    font-size: 3em;
+    line-height: 1em;
+    height: 1em;
+}
+
+/** Black Vertical Border **/
+.border {
+    width: 1px;
+    height: 90%;
+    align-self: center;
+    background-color: black;
+}
+
+.no-appointments {
+    text-align: center;
+    font-size: 32px;
+    line-height: 1.25em;
+}
+.appointment-title {
+    font-size: 64px;
+    line-height: 1.25em;
+}
+
+.right-sidebar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 96px;
+    height: 100%;
+    padding: 16px;
+}
+
+.appointment {
+    
+    margin-left: auto;
+    margin-right: auto;
+    div {
+        margin: 10px;
+        text-align: center;
+    }
+}
+
+.content-area {
+    padding: 15px;
+}
+.align-right {
+    margin-left: auto;
+}
+app-time-interval {
+    font-size: 2em;
+}
+.font-size-1em {
+    font-size: 1rem;
+    line-height: 1em;
+    height: 1em;
+}
+
+clr-icon {
+    width: 64px;
+    height: 64px;
+    margin: 16px;
+    color: #2D9CDB;
+}

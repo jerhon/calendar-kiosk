@@ -1,0 +1,49 @@
+<div class="main-container">
+    <div class="content-container">
+        <nav class="sidenav">
+            <section class="sidenav-content text-vcenter">
+                <ul class="nav-list align-right">
+                    <div class="profile-picture" >
+                        <img *ngIf="this.profileUrl" [src]="this.profileUrl" />
+                    </div>
+                    <div class="text-right current-month">{{this.month}}</div>
+                    <div class="text-right current-day-of-month">{{this.dayOfMonth}}</div>
+                    <div class="text-right current-day-of-week">{{this.dayOfWeek}}</div>   
+                    <br />
+                    <div>
+                        <clr-icon shape="calendar" [routerLink]="['/calendar']"></clr-icon>
+                    </div>
+                    <div (click)="this.refresh()">
+                        <clr-icon shape="refresh"></clr-icon>
+                    </div>           
+                </ul>
+            </section>
+        </nav>
+        
+        <div class="border"></div>
+        
+        <!-- Loading Area -->
+        <div class="content-area text-vcenter text-center" *ngIf="this.loading">
+            <span class="spinner text-center">Loading...</span>
+        </div>
+
+        <!-- Next Appointment-->
+        <div class="content-area  text-vcenter" *ngIf="!this.loading">
+            <div class="appointment">
+                <div class="text-center current-time">{{this.time}}</div>
+                <br />
+                <ng-container *ngIf="this.next">
+                    <div class="font-size-1em">Your next appointment</div>
+                    <div class="appointment-title">{{this.next.description}}</div>
+                    <div class="countdown">
+                        <div class="font-size-1em">in</div>
+                        <app-time-interval [duration]="this.countdown"></app-time-interval>
+                    </div>
+                </ng-container>
+                <div *ngIf="!this.next" class="no-appointments">
+                    <div>You have no appointments, enjoy your day!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BroadcastService, MsalService } from '@azure/msal-angular';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'family-calendar';
+
+  constructor(
+    private broadcastService: BroadcastService, 
+    private msalService: MsalService) { }
+
+  ngOnInit() {
+    var subscription = this.broadcastService.subscribe("msal:acquireTokenFailure", () => {
+      this.msalService.loginRedirect();
+    });
+  }
 }
