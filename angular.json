@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "family-calendar": {
+    "calendar-kiosk": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/family-calendar",
+            "outputPath": "dist/calendar-kiosk",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -100,18 +100,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "family-calendar:build"
+            "browserTarget": "calendar-kiosk:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "family-calendar:build:production"
+              "browserTarget": "calendar-kiosk:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "family-calendar:build"
+            "browserTarget": "calendar-kiosk:build"
           }
         },
         "test": {
@@ -148,16 +148,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "family-calendar:serve"
+            "devServerTarget": "calendar-kiosk:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "family-calendar:serve:production"
+              "devServerTarget": "calendar-kiosk:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "family-calendar"
+  "defaultProject": "calendar-kiosk"
 }
