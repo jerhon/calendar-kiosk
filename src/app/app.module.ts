@@ -39,7 +39,7 @@ export const protectedResourceMap: [string, string[]][] = [
       {
         auth: {
           clientId: environment.clientId,
-          redirectUri: "https://hs-calendar-viewer.netlify.com",
+          redirectUri: environment.redirectUri,
         },
         cache: {
           cacheLocation: "localStorage",

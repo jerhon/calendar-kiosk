@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  clientId: "bb084d21-7eed-4a08-bc30-da53dd721eda"
+  clientId: "bb084d21-7eed-4a08-bc30-da53dd721eda",
+  redirectUri: "https://hs-calendar-viewer.netlify.app"
 };
 
 /*
